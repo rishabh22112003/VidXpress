@@ -1,12 +1,50 @@
-# React + Vite
+# 🎬 Streamify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A feature-rich YouTube-style frontend built using **React**, **Bootstrap**, and **Firebase**, with integrated **voice search** using the **Web Speech API** and fully functional **authentication** (login/signup). Supports **Dark Mode** and **Category Filters** for a smart, responsive UX.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔥 Features
 
-## Expanding the ESLint configuration
+- 🎨 Clean YouTube-inspired UI using React & Bootstrap
+- 🌙 Dark Mode Toggle
+- 🔐 Firebase Auth (Login & Signup)
+- 🎤 Voice Search via Web Speech API
+- 🔎 Text Search with Live Results
+- 🎯 Category Filters (e.g., Coding, Music, Tech, etc.)
+- 📱 Responsive Layout
+- ⚡ Instant YouTube API video previews
+- 🔁 Video swapping via side list click
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 Tech Stack
+
+| Tech             | Purpose                            |
+|------------------|------------------------------------|
+| React            | Frontend UI                        |
+| Bootstrap        | Styling & Layout                   |
+| Firebase         | Auth (Email/Password login/signup) |
+| Web Speech API   | Voice-based search                 |
+| YouTube Data API | Fetch videos                       |
+| React Router     | Routing between pages              |
+
+---
+
+## 🚀 Screenshots
+
+| Light Mode | Dark Mode |
+|------------|-----------|
+|<img width="1867" height="921" alt="Screenshot_light-mode" src="https://github.com/user-attachments/assets/ace99f03-6d31-419b-b1a0-a15c5640ded1" />
+|<img width="1877" height="917" alt="Screenshot_dark-mode" src="https://github.com/user-attachments/assets/f43184c3-78dc-4c8b-ab90-3e5b339813f4" />
+ 
+
+---
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/your-username/react-youtube-ui-clone
+cd react-youtube-ui-clone
+npm install
+npm run dev
