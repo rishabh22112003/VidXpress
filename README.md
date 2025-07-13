@@ -29,17 +29,6 @@ A feature-rich YouTube-style frontend built using **React**, **Bootstrap**, and 
 | YouTube Data API | Fetch videos                       |
 | React Router     | Routing between pages              |
 
----
-
-## 🚀 Screenshots
-
-| Light Mode | Dark Mode |
-|------------|-----------|
-|<img width="1867" height="921" alt="Screenshot_light-mode" src="https://github.com/user-attachments/assets/ace99f03-6d31-419b-b1a0-a15c5640ded1" />
-|<img width="1877" height="917" alt="Screenshot_dark-mode" src="https://github.com/user-attachments/assets/f43184c3-78dc-4c8b-ab90-3e5b339813f4" />
- 
-
----
 
 ## 🛠️ Installation
 
@@ -48,3 +37,8 @@ git clone https://github.com/your-username/react-youtube-ui-clone
 cd react-youtube-ui-clone
 npm install
 npm run dev
+
+open your browser....
+http://localhost:5173 (main app)
+http://localhost:5173/login (Login page)
+http://localhost:5173/signup (Signup page)
