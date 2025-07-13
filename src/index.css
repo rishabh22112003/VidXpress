@@ -1,11 +1,11 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(135deg, #141e30, #243b55);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,21 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  place-items: center;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
 
 h1 {
@@ -35,34 +27,87 @@ h1 {
   line-height: 1.1;
 }
 
+a {
+  font-weight: 600;
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0072ff;
+}
+
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 10px;
+  border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background: linear-gradient(145deg, #00c6ff, #0072ff);
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
+
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #0072ff, #00c6ff);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #212121;
     background-color: #ffffff;
   }
+
   a:hover {
-    color: #747bff;
+    color: #5555ff;
   }
+
   button {
-    background-color: #f9f9f9;
+    background: linear-gradient(145deg, #ff6a00, #ee0979);
+    color: white;
   }
+}
+/* 🌈 CategoryBar Gradient Button Styles */
+.category-btn {
+  background: transparent;
+  border: 2px solid transparent;
+  color: white;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 6px 16px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.category-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 25px;
+  padding: 2px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.category-btn:hover {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 75, 43, 0.4);
+}
+
+/* 🔴 Active Selected Button */
+.active-category {
+  background: linear-gradient(to right, #ff416c, #ff4b2b) !important;
+  color: white !important;
 }

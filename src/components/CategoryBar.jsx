@@ -8,7 +8,7 @@ const CategoryBar = ({ onCategorySelect, selectedCategory }) => {
             {categories.map((category, index) => (
                 <Button
                     key={index}
-                    variant={category === selectedCategory ? "danger" : "outline-danger"}
+                    className={`category-btn ${category === selectedCategory ? "active-category" : ""}`}
                     onClick={() => onCategorySelect(category)}
                 >
                     {category}

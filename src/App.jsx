@@ -40,9 +40,26 @@ const App = () => {
   };
   
   return (
-    <Container fluid className={`mt-3 min-vh-100 ${darkMode ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
+    <Container
+      fluid
+      className={`mt-3 min-vh-100 p-0 ${darkMode ? 'bg-dark text-light' : 'bg-light text-dark'}`}
+      style={{
+        background: darkMode
+          ? "linear-gradient(120deg, #000000, #434343)"
+          : "linear-gradient(120deg, #f6d365, #fda085)",
+        transition: "background 0.4s ease-in-out",
+      }}
+    >
       <div className="d-flex justify-content-end p-2">
-        <Button variant={darkMode ? "light" : "dark"} onClick={toggleTheme}>
+        <Button
+          variant={darkMode ? "light" : "dark"}
+          onClick={toggleTheme}
+          style={{
+            boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+            borderRadius: "20px",
+            fontWeight: "bold",
+          }}
+        >
           {darkMode ? "☀ Light" : "🌙 Dark"}
         </Button>
       </div>
