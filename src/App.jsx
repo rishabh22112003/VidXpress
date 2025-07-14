@@ -17,22 +17,52 @@ const App = () => {
 
   //useEffect() hmesa UI k bad chlta hai
   useEffect(() => {
-    //getData()
     async function getData() {
-      const response = await youtube.get('search', {
-        params: {
-          part: "snippet",
-          maxResults: 5,
-          key: "AIzaSyARNMAN0P2DAgniwmwCb1hhHX3vszBBJpo",
-          q: searchValue || 'computer programming'
+      try {
+        let response;
+
+        if (!searchValue) {
+          // 🎯 Trending (mostPopular) videos
+          response = await youtube.get('videos', {
+            params: {
+              part: "snippet",
+              chart: "mostPopular",
+              maxResults: 5,
+              regionCode: "IN", // You can change it based on user location
+              key: "AIzaSyARNMAN0P2DAgniwmwCb1hhHX3vszBBJpo"
+            }
+          });
+        } else {
+          // 🔍 Keyword-based search
+          response = await youtube.get('search', {
+            params: {
+              part: "snippet",
+              maxResults: 5,
+              q: searchValue,
+              type: "video",
+              key: "AIzaSyARNMAN0P2DAgniwmwCb1hhHX3vszBBJpo"
+            }
+          });
         }
-      })
-      //console.log(response.data, "==>response")
-      setMainVideo(response.data.items[0])
-      setList(response.data.items)
+
+        const items = response.data.items;
+
+        const formattedItems = items.map(item => {
+          return item.id?.videoId
+            ? item
+            : { ...item, id: { videoId: item.id } };
+        });
+
+        setMainVideo(formattedItems[0]);
+        setList(formattedItems);
+      } catch (err) {
+        console.error("Video fetch error:", err);
+      }
     }
-    getData()
-  }, [searchValue])
+
+    getData();
+  }, [searchValue]);
+
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
