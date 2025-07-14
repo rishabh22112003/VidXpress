@@ -1,4 +1,4 @@
-# 🎬 Streamify
+# 🎬 VidXpress
 
 A feature-rich YouTube-style frontend built using **React**, **Bootstrap**, and **Firebase**, with integrated **voice search** using the **Web Speech API** and fully functional **authentication** (login/signup). Supports **Dark Mode** and **Category Filters** for a smart, responsive UX.
 
@@ -33,8 +33,8 @@ A feature-rich YouTube-style frontend built using **React**, **Bootstrap**, and 
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/your-username/react-youtube-ui-clone
-cd react-youtube-ui-clone
+git clone https://github.com/your-username/VidXpress
+cd VidXpress
 npm install
 npm run dev
 
